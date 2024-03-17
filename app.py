@@ -9,6 +9,7 @@ from pydantic import BaseModel
 from typing import List
 import json
 import pandas as pd
+import numpy as np
 import datetime as dt
 # from datetime import datetime, timedelta New name
 
@@ -280,7 +281,7 @@ def main():
     
     
     
-    
+    # ----------
     
     form_placeholder = st.sidebar.empty()  #
     
@@ -323,9 +324,53 @@ def main():
         st.table(response.json())
         # st.write(response.json())
         
+    # ----------
+    
+    form_placeholder = st.sidebar.empty()  #
+    
+    with form_placeholder.form(key='Show chart'):
+    
+        # st.sidebar.button("Retry")
+        submit_button = st.form_submit_button('Show chart')
+    if submit_button:
+        
+        st.write('#### Project chart')
+        
+        # st.table(st.session_state.user_data)
+       
+        # response = requests.get(API_URL_users)
+        # st.write(response.status_code)
+        # st.table(response.json())
+        
+        # st.write('#### Link data')
+        
+        # st.table(st.session_state.link_data)
+       
+        # response = requests.get(API_URL_links)
+        # st.write(response.status_code)
+        # st.table(response.json())
+        
+        # st.write('#### Meeting data')
+        
+        # st.table(st.session_state.meeting_data)
+        
+        # response = requests.get(API_URL_meetings)
+        # st.write(response.status_code)
+        # st.table(response.json())
+        
+        st.write('#### Project data')
+        
+        st.table(st.session_state.project_data)
+        
+        response = requests.get(API_URL_projects)
+        st.write(response.status_code)
+        st.table(response.json())
+        # st.write(response.json())
+        
         # pass
         
     st.sidebar.table(st.session_state['display_data'])
+    # --------------------
     # --------------------
          
 # difinition of functions        
@@ -402,7 +447,7 @@ def sub_log(df_display, df_user):
             else:
                 st.sidebar.error('Mail address was already uesd')
                 
-                st.write('okokok')
+                # st.write('okokok')
         
             
 def sub_select_item_and_CRUD(df_display, df_user):

@@ -3,6 +3,7 @@ CRUD_basic
 00 : base
 01 : add project table -> done
 02 : refactoring the code -> done
+03 : add display chart function
 
 
 
