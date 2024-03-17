@@ -1,0 +1,19 @@
+database_CRUD_basic
+
+01 : same as aa_result/CRUD_basic_01
+
+
+
+
+
+sidebar                             main 
+--------------------------------------------------------
+log in/sign in                      link C
+select link / meeting               link R
+select CRUD                         link U
+                                    link D
+
+                                    meeting C
+                                    meeting R
+                                    meeting U
+                                    meeting D
